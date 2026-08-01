@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Go Project, Oujda</title>
+<meta name="description" content="Contactez Go Project à Oujda. Décrivez votre projet énergie solaire, menuiserie aluminium ou digital. Relevé technique gratuit dans tout l'Oriental, devis ferme en dirhams sous 24 h.">
+<meta name="theme-color" content="#000B14">
+<meta name="geo.region" content="MA-01">
+<meta name="geo.placename" content="Oujda">
+<link rel="icon" href="images/logo-on-energy.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-transition="in">
+
+<div class="preloader" role="status" aria-label="Chargement du site">
+  <div class="preloader__inner">
+    <img class="preloader__mark" src="images/logo-on-energy.png" alt="" width="72" height="72">
+    <div class="preloader__bar"><span></span></div>
+    <p class="preloader__count">000</p>
+  </div>
+</div>
+
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="/" aria-label="Go Project — accueil">
+        <img class="brand__mark" src="images/logo-on-energy.png" alt="" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Go Project</span>
+          <span class="brand__tag">Énergie · Menuiserie · Digital</span>
+        </span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="/">Accueil</a></li>
+        <li><a class="nav__link" href="/a-propos">À Propos</a></li>
+        <li><a class="nav__link" href="/contact" aria-current="page">Contact</a></li>
+        <li><a class="btn btn--primary" href="#contact-form">Demander un devis</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a class="btn btn--primary nav__cta" href="#contact-form" data-magnetic>Devis</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero hero--inner">
+    <div class="grid-backdrop parallax" data-parallax="0.12" aria-hidden="true"></div>
+    <div class="container">
+      <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span>Contact</span>
+      </nav>
+
+      <div class="hero__inner">
+        <p class="kicker kicker--lime reveal">Parlons chiffres</p>
+        <h1 class="hero__title" data-split>
+          <span class="line">Votre projet</span>
+          <span class="line">commence ici.</span>
+        </h1>
+        <p class="lead hero__lead reveal" style="--reveal-delay:200ms">
+          Un formulaire court, une réponse argumentée sous 24 heures ouvrées.
+          Le relevé technique sur site est gratuit et sans engagement, partout
+          dans la région de l'Oriental.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FORMULAIRE ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="split split--form">
+
+        <!-- ---------- Colonne formulaire ---------- -->
+        <div class="reveal">
+          <div class="form-shell">
+            <p class="kicker">01 — Votre demande</p>
+            <h2 style="margin-block: var(--space-3) var(--space-5); font-size: var(--fs-xl)">
+              Décrivez votre besoin.
+            </h2>
+
+            <div class="form-status" id="form-status" aria-live="polite">
+              <svg data-for="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true" hidden>
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <svg data-for="err" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true" hidden>
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+              </svg>
+              <span></span>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+
+                <div class="field">
+                  <label class="field__label" for="nom">Nom complet <span class="req" aria-hidden="true">*</span></label>
+                  <input class="field__control" type="text" id="nom" name="nom"
+                         autocomplete="name" placeholder="Prénom et nom"
+                         aria-describedby="err-nom" required>
+                  <p class="field__error" id="err-nom">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Indiquez votre nom.</span>
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="entreprise">Société</label>
+                  <input class="field__control" type="text" id="entreprise" name="entreprise"
+                         autocomplete="organization" placeholder="Optionnel">
+                  <p class="field__hint">Laissez vide s'il s'agit d'un projet privé.</p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="email">Adresse e-mail <span class="req" aria-hidden="true">*</span></label>
+                  <input class="field__control" type="email" id="email" name="email"
+                         autocomplete="email" placeholder="nom@domaine.ma"
+                         aria-describedby="err-email" required>
+                  <p class="field__error" id="err-email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Format attendu : nom@domaine.ma</span>
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="telephone">Téléphone</label>
+                  <input class="field__control" type="tel" id="telephone" name="telephone"
+                         autocomplete="tel" placeholder="06 12 34 56 78"
+                         aria-describedby="err-telephone">
+                  <p class="field__error" id="err-telephone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Numéro invalide.</span>
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="ville">Ville / Commune</label>
+                  <select class="field__control" id="ville" name="ville">
+                    <option value="">Sélectionnez…</option>
+                    <option value="oujda">Oujda</option>
+                    <option value="berkane">Berkane</option>
+                    <option value="nador">Nador</option>
+                    <option value="saidia">Saïdia</option>
+                    <option value="taourirt">Taourirt</option>
+                    <option value="jerada">Jerada</option>
+                    <option value="ahfir">Ahfir</option>
+                    <option value="driouch">Driouch</option>
+                    <option value="autre">Autre commune</option>
+                  </select>
+                  <p class="field__hint">Utile pour planifier le relevé sur site.</p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="pole">Pôle concerné <span class="req" aria-hidden="true">*</span></label>
+                  <select class="field__control" id="pole" name="pole" aria-describedby="err-pole" required>
+                    <option value="">Sélectionnez un pôle…</option>
+                    <option value="energie">Énergie — photovoltaïque, pompage, thermique</option>
+                    <option value="menuiserie">Menuiserie — châssis alu, agencement</option>
+                    <option value="digital">Digital — site, application, automatisation</option>
+                    <option value="multiple">Projet transversal (plusieurs pôles)</option>
+                    <option value="autre">Autre demande</option>
+                  </select>
+                  <p class="field__error" id="err-pole">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Sélectionnez un pôle d'intervention.</span>
+                  </p>
+                </div>
+
+                <div class="field field--full">
+                  <label class="field__label" for="message">Votre projet <span class="req" aria-hidden="true">*</span></label>
+                  <textarea class="field__control" id="message" name="message" maxlength="1200"
+                            placeholder="Nature des travaux, surface ou puissance concernée, délai souhaité, contraintes techniques connues…"
+                            aria-describedby="err-message message-count" required></textarea>
+                  <p class="field__hint" id="message-count" aria-live="off">0 / 1200</p>
+                  <p class="field__error" id="err-message">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Décrivez votre projet en 20 caractères minimum.</span>
+                  </p>
+                </div>
+
+                <div class="field field--full">
+                  <label class="field__label" for="plans">Plans, photos ou devis existant</label>
+                  <div class="filefield">
+                    <input type="file" id="plans" name="plans" multiple
+                           accept=".pdf,.jpg,.jpeg,.png,.dwg,.heic"
+                           aria-describedby="plans-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+                      <path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v4h16v-4"/>
+                    </svg>
+                    <span class="filefield__text">Ajouter des fichiers (PDF, JPG, PNG, DWG)</span>
+                  </div>
+                  <p class="field__hint" id="plans-hint">
+                    Facultatif, mais un plan ou quelques photos accélèrent nettement le chiffrage.
+                  </p>
+                </div>
+
+                <div class="field field--full">
+                  <span class="field__label" id="pref-label">Comment préférez-vous être recontacté ?</span>
+                  <div class="segmented" role="group" aria-labelledby="pref-label">
+                    <label>
+                      <input type="radio" name="prefcontact" value="telephone" checked>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+                        <path d="M4 4h5l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v5a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1z"/>
+                      </svg>
+                      Téléphone
+                    </label>
+                    <label>
+                      <input type="radio" name="prefcontact" value="whatsapp">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+                      </svg>
+                      WhatsApp
+                    </label>
+                    <label>
+                      <input type="radio" name="prefcontact" value="email">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+                        <path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/>
+                      </svg>
+                      E-mail
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field field--full checkfield-wrap">
+                  <label class="checkfield" for="rgpd">
+                    <input type="checkbox" id="rgpd" name="rgpd" aria-describedby="err-rgpd">
+                    <span class="checkfield__box" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                        <path d="M20 6 9 17l-5-5"/>
+                      </svg>
+                    </span>
+                    <span>
+                      J'accepte que Go Project utilise ces informations pour traiter ma demande.
+                      Aucune donnée n'est cédée à un tiers. <span class="req" aria-hidden="true">*</span>
+                    </span>
+                  </label>
+                  <p class="field__error" id="err-rgpd" style="margin-top: var(--space-2)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>
+                    </svg>
+                    <span>Votre accord est nécessaire pour vous répondre.</span>
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="form-foot">
+                <p class="field__hint" style="max-width: 34ch">
+                  Les champs marqués <span class="text-accent">*</span> sont obligatoires.
+                  Réponse sous 24 heures ouvrées.
+                </p>
+                <button class="btn btn--primary" type="submit">
+                  Envoyer la demande
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ---------- Colonne coordonnées ---------- -->
+        <aside class="reveal" style="--reveal-delay:120ms">
+          <p class="kicker">02 — Coordonnées</p>
+          <h2 style="margin-block: var(--space-3) var(--space-5); font-size: var(--fs-xl)">
+            Contact direct.
+          </h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+                  <path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/>
+                </svg>
+              </span>
+              <div>
+                <p class="contact-item__label">E-mail</p>
+                <a class="contact-item__value" href="mailto:contact@goproject.ma">contact@goproject.ma</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+                  <path d="M4 4h5l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v5a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1z"/>
+                </svg>
+              </span>
+              <div>
+                <p class="contact-item__label">Téléphone</p>
+                <a class="contact-item__value" href="tel:+212536000000">+212 5 36 00 00 00</a>
+                <a class="contact-item__value" href="tel:+212600000000">+212 6 00 00 00 00</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+                  <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+                </svg>
+              </span>
+              <div>
+                <p class="contact-item__label">Bureaux &amp; atelier</p>
+                <p class="contact-item__value">Oujda 60000</p>
+                <p class="contact-item__value">Région de l'Oriental, Maroc</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+                  <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>
+                </svg>
+              </span>
+              <div>
+                <p class="contact-item__label">Horaires</p>
+                <p class="contact-item__value">Lun – Ven · 08:30 → 18:30</p>
+                <p class="contact-item__value">Samedi · 09:00 → 13:00</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn--brand btn--block" href="https://wa.me/212600000000"
+             target="_blank" rel="noopener noreferrer" style="margin-top: var(--space-5)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+            </svg>
+            Écrire sur WhatsApp
+          </a>
+
+          <div class="card chevron-cut" style="margin-top: var(--space-5)">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Urgence chantier</h3>
+            <p class="card__desc">
+              Pour une intervention urgente sur un ouvrage existant, appelez directement.
+              Le formulaire est réservé aux nouvelles demandes.
+            </p>
+          </div>
+
+          <!-- RÉSEAUX SOCIAUX — remplacez les URL par vos comptes réels -->
+          <div class="social-block" style="margin-top: var(--space-6)">
+            <h3 class="footer__heading" style="margin-bottom: 0">Nous suivre</h3>
+            <p class="social-note">
+              Chantiers en cours, ouvrages livrés et conseils techniques —
+              publiés régulièrement sur nos réseaux.
+            </p>
+            <ul class="social">
+              <li>
+                <a class="social__link social__link--fb" href="https://www.facebook.com/goproject.ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur Facebook">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17 3h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social__link social__link--ig" href="https://www.instagram.com/goproject.ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="16.8" cy="7.2" r="1.1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social__link social__link--li" href="https://www.linkedin.com/company/goproject-ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1a4.2 4.2 0 0 1 3.8-2.1c4 0 4.3 2.6 4.3 5.4V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21H9z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social__link social__link--wa" href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur WhatsApp">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6a20 20 0 0 0-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5.2-.4v-.4l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3A2.9 2.9 0 0 0 6.5 9c0 1.3.9 2.5 1 2.7a10.3 10.3 0 0 0 4 3.5c1.9.7 1.9.5 2.3.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.3z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="split split--faq">
+        <div class="reveal sticky-head">
+          <p class="kicker kicker--lime">03 — Questions fréquentes</p>
+          <h2 style="margin-block: var(--space-3) var(--space-4)" data-split>
+            Avant de nous écrire.
+          </h2>
+          <p class="lead">
+            Les réponses aux questions que l'on nous pose systématiquement
+            lors du premier contact.
+          </p>
+        </div>
+
+        <div class="accordion reveal" style="--reveal-delay:100ms">
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+                Le relevé technique est-il vraiment gratuit ?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+              <div>
+                <p>
+                  Oui, sans condition et sans engagement, dans tout l'Oriental. La visite
+                  permet de mesurer l'existant et d'établir un devis ferme en dirhams.
+                  Si le projet ne se fait pas, rien ne vous est facturé.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+                Intervenez-vous en dehors d'Oujda ?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+              <div>
+                <p>
+                  Oui. Berkane, Nador, Saïdia, Taourirt, Jerada et Ahfir sont couverts
+                  en intervention courante. Au-delà de la région, nous étudions au cas
+                  par cas selon l'ampleur du chantier.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+                Quel est le délai moyen d'intervention ?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+              <div>
+                <p>
+                  Le relevé a lieu sous une semaine, le devis suit sous cinq jours ouvrés.
+                  Le délai d'exécution dépend du pôle : comptez trois à six semaines en
+                  menuiserie (fabrication atelier), deux à quatre semaines en énergie,
+                  et un cadrage au projet pour le digital.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+                Travaillez-vous sur plusieurs pôles à la fois ?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+              <div>
+                <p>
+                  C'est précisément notre intérêt. Un projet mêlant menuiseries,
+                  installation solaire et supervision connectée est piloté par un seul
+                  chef de projet, avec un planning unique. Vous évitez la coordination
+                  entre entreprises distinctes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+                Que devient le devis après signature ?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-btn-5">
+              <div>
+                <p>
+                  Le prix est ferme. Un supplément ne peut survenir qu'en cas de découverte
+                  imprévisible en cours de chantier, et il fait alors l'objet d'un avenant
+                  écrit soumis à votre accord avant toute exécution.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/">
+          <img class="brand__mark" src="images/logo-on-energy.png" alt="" width="40" height="40">
+          <span class="brand__text">
+            <span class="brand__name">Go Project</span>
+            <span class="brand__tag">Énergie · Menuiserie · Digital</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          Trois pôles techniques à Oujda, réunis par une même exigence :
+          livrer un ouvrage mesurable, documenté et durable.
+        </p>
+
+        <!-- RÉSEAUX SOCIAUX — remplacez les URL par vos comptes réels -->
+        <div class="social-block" style="margin-top: var(--space-5)">
+          <h2 class="footer__heading" style="margin-bottom: 0">Suivez-nous</h2>
+          <ul class="social">
+            <li>
+              <a class="social__link social__link--fb" href="https://www.facebook.com/goproject.ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17 3h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--ig" href="https://www.instagram.com/goproject.ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="16.8" cy="7.2" r="1.1" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--li" href="https://www.linkedin.com/company/goproject-ma" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1a4.2 4.2 0 0 1 3.8-2.1c4 0 4.3 2.6 4.3 5.4V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21H9z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--wa" href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer" aria-label="Go Project sur WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6a20 20 0 0 0-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5.2-.4v-.4l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3A2.9 2.9 0 0 0 6.5 9c0 1.3.9 2.5 1 2.7a10.3 10.3 0 0 0 4 3.5c1.9.7 1.9.5 2.3.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.3z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="footer__heading">Navigation</h2>
+        <ul class="footer__list">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/a-propos">À Propos</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/#realisations">Réalisations</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__heading">Pôles</h2>
+        <ul class="footer__list">
+          <li><a href="/#poles">Énergie solaire</a></li>
+          <li><a href="/#poles">Menuiserie aluminium</a></li>
+          <li><a href="/#poles">Digital</a></li>
+          <li><a href="/#devis">Construction du devis</a></li>
+          <li><a href="/#territoire">Zone d'intervention</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__heading">Contact</h2>
+        <ul class="footer__list">
+          <li><a href="mailto:contact@goproject.ma">contact@goproject.ma</a></li>
+          <li><a href="tel:+212536000000">+212 5 36 00 00 00</a></li>
+          <li><a href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer">WhatsApp direct</a></li>
+          <li><span>Oujda 60000, Maroc</span></li>
+          <li><span>Lun–Ven 08:30–18:30 · Sam 09:00–13:00</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Go Project™. Tous droits réservés.</p>
+      <div class="footer-bottom__legal">
+        <a href="#">Mentions légales</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions générales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Boutons flottants (bureau) -->
+<div class="float-stack">
+  <a class="float-btn float-btn--wa" href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer" aria-label="Nous écrire sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6a20 20 0 0 0-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5.2-.4v-.4l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3A2.9 2.9 0 0 0 6.5 9c0 1.3.9 2.5 1 2.7a10.3 10.3 0 0 0 4 3.5c1.9.7 1.9.5 2.3.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.3z"/>
+    </svg>
+  </a>
+  <button class="float-btn float-btn--top" type="button" aria-label="Revenir en haut de la page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+      <path d="M12 19V5M6 11l6-6 6 6"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Barre d'action (mobile) -->
+<nav class="action-bar" aria-label="Actions rapides">
+  <a class="action-bar__item" href="tel:+212536000000">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M4 4h5l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v5a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1z"/>
+    </svg>
+    Appeler
+  </a>
+  <a class="action-bar__item action-bar__item--wa" href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.2L2 22l5.9-1.6A10.4 10.4 0 1 0 20.5 3.5zM12 20.2a8.2 8.2 0 0 1-4.4-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6a20 20 0 0 0-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.6.2-.8l.4-.5.2-.4v-.4l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3A2.9 2.9 0 0 0 6.5 9c0 1.3.9 2.5 1 2.7a10.3 10.3 0 0 0 4 3.5c1.9.7 1.9.5 2.3.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.3z"/>
+    </svg>
+    WhatsApp
+  </a>
+  <a class="action-bar__item action-bar__item--cta" href="#contact-form">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M4 3h16v18l-8-4-8 4z"/><path d="M9 8h6M9 12h6"/>
+    </svg>
+    Devis
+  </a>
+</nav>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
