@@ -181,7 +181,10 @@ def porte(ax, x, y, w, h, ep_dormant, ep_ouvrant):
     ox, oy = x + ep_dormant, y + seuil
     ow, oh = w - 2 * ep_dormant, h - ep_dormant - seuil
     cadre(ax, ox, oy, ow, oh, ep_ouvrant, SABLE, z=4)
-    vitrage_sable(ax, ox + ep_ouvrant, oy + ep_ouvrant, ow - 2 * ep_ouvrant, oh - 2 * ep_ouvrant, z=4.5)
+    plinthe = 70  # traverse basse d'ouvrant plus haute (graphique)
+    rect(ax, ox + ep_ouvrant, oy + ep_ouvrant, ow - 2 * ep_ouvrant, plinthe, PROFIL, lw=0.6, z=4.4)
+    vitrage_sable(ax, ox + ep_ouvrant, oy + ep_ouvrant + plinthe, ow - 2 * ep_ouvrant,
+                  oh - 2 * ep_ouvrant - plinthe, z=4.5)
     triangle_ouverture(ax, ox, oy, ow, oh, paumelles="gauche")
     paumelles(ax, ox, oy, oh, "gauche")
     poignee_ext(ax, ox + ow - ep_ouvrant / 2, y + 1050)
@@ -262,9 +265,11 @@ def _vue_pvc_lateral(ax, couplage_cote):
 
 def vue_pvc_porte(ax):
     porte(ax, 0, 0, L_PORTE, H_BAS, EP_PVC, EP_OUV)
+    ax.text(L_PORTE + 40, H_BAS * 0.84, "LINKS", ha="left", va="center", fontsize=8,
+            weight="bold", zorder=11)
     cote_h(ax, 0, L_PORTE, H_BAS + 170, H_BAS)
     cote_h(ax, 0, L_PORTE, -160, 0, dessus=False)
-    cote_v(ax, 0, H_BAS, L_PORTE + 170, L_PORTE, gauche=False)
+    cote_v(ax, 0, H_BAS, L_PORTE + 300, L_PORTE, gauche=False)
 
 
 def vue_pvc_assemble(ax):
@@ -298,7 +303,7 @@ VUES = [
     ("2-2_PVC_panneau_lateral_gauche",
      "Variante PVC – élément 2/ panneau latéral gauche (3 B.A.L.) – vue extérieure – ×3",
      (L_LAT, H_BAS), lambda ax: _vue_pvc_lateral(ax, "droite"), dict(marge_h=520)),
-    ("2-3_PVC_porte", "Variante PVC – élément 3/ porte 1 vantail, vitrage sablé – vue extérieure – ×3",
+    ("2-3_PVC_porte", "Variante PVC – élément 3/ porte 1 vantail « LINKS », vitrage sablé – vue extérieure – ×3",
      (L_PORTE, H_BAS), vue_pvc_porte, {}),
     ("2-4_PVC_panneau_lateral_droit",
      "Variante PVC – élément 4/ panneau latéral droit (3 B.A.L.) – vue extérieure – ×3",
